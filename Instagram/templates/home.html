@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>A Pen by  Pablo Villa</title>
+  <link href="https://file.myfontastic.com/2sMRZvKR3ic3NH2VStd79J/icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+</head>
+
+<body>
+ <a href="{% url 'logout' %}"> Cerrar Sesion </a>
+  <section class="photo_container">
+  <section class="photo_header">
+  <img src="https://memegenerator.net/img/images/60x60/17393944.jpg" class="photo_user"/>
+    <h3 class="photo_username"> momos4k </h3>
+  </section>
+  <section class="photo_image">
+           <img src="http://i0.kym-cdn.com/photos/images/facebook/001/102/900/a38.png">
+   </section>
+  <section class="photo_icons">
+    <i class="icon-heart-o"></i>
+    <i class="icon-comments"></i>
+
+  </section>
+   <h6 class="photo_likes"><span>43.294<span> Me gusta </h6>
+           <section class="photo_comments">
+                <section class="photo_comment"> <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium unde iste suscipit dicta nobis temporibus.</div>
+     </section>
+</section>
+
+
+</body>
+</html>

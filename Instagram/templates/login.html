@@ -5,9 +5,15 @@
     <title></title>
   </head>
   <body>
-    <input  type="text" name="usuario" placeholder="Nombre de usuario" >
+    {% if form.errors %}
+      {{ form.errors }} <!-- display the form errors if they exist -->
+    {% endif %}
+    <form class="" action="{% url 'login' %}" method="post">
+    {% csrf_token %}
+    <input  type="text" name="username" placeholder="Nombre de usuario" >
     <br>
     <input  type="password" name="password" placeholder="contraseña" >
-
+  <input type="submit" name"" value="Iniciar sesion">
+  </form>
   </body>
 </html>
