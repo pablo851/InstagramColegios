@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+
+
+
+
+
+
+
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static '/css/galeria.css' %}">   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+
+
+
+
+
+</head>
+
+<body>
+
+  <nav class="navbar">
+  <section class="logo-section"><img class="logo" src="https://en.facebookbrand.com/wp-content/uploads/2016/08/glyph-logo_may2016.png "/>
+    <div></div><img class="logo-name" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png"/>
+  </section>
+  <section class="search-section">
+    <input class="input-search" type="text" name="search" placeholder="buscar"/>
+  </section>
+  <section class="icons-section">
+     <a class="fa fa-upload" href="{% url 'galeria' %}"> </a>
+     <a class="fa fa-home" href="{% url 'home'%}"></a>
+     <a class="fa fa-user-o" href="{% url 'profile' %}"></a>
+   </section></nav>
+
+  <br>
+  <br>
+
+
+    <form class="" action="{% url 'galeria' %}" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+
+    <input type="file" name="photo"><br>
+
+    <input type="text" name="descripcion" placeholder="Descricion...">
+    <button name="button"> SUBIR FOTO</button>
+  </form>
+
+  </body>
+</html>
